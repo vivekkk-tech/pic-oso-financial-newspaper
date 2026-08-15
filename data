@@ -1,0 +1,32 @@
+{
+  "generated_at": null,
+  "edition": "PICOSO \u2014 Zero-Cost Edition",
+  "status": "waiting_for_first_run",
+  "market_snapshot": {
+    "nifty": "\u2014",
+    "sensex": "\u2014",
+    "nifty_it": "\u2014",
+    "usd_inr": "\u2014",
+    "brent": "\u2014",
+    "gold": "\u2014"
+  },
+  "stories": [],
+  "paint": [],
+  "it": [],
+  "startups": [],
+  "deals": [],
+  "cfa": {
+    "concept": "DCF",
+    "news": "Waiting for the first daily run.",
+    "explanation": "PICOSO will connect one finance concept to a relevant story.",
+    "application": "Review the affected valuation assumption before changing a model.",
+    "takeaway": "Use news as a reason to revisit assumptions, not as a reason to force a valuation change.",
+    "source": "PICOSO",
+    "source_url": ""
+  },
+  "tomorrow": {
+    "question": "What is the next market-moving variable to watch?",
+    "watch": "The next fresh macro, company or commodity development.",
+    "why": "PICOSO will update this after the first successful run."
+  }
+}
