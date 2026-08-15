@@ -1,0 +1,39 @@
+name: PICOSO Daily News
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 09:00 IST = 03:30 UTC
+    - cron: "30 3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate PICOSO edition
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node generate.mjs
+
+      - name: Publish generated edition
+        run: |
+          git config user.name "PICOSO Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news.json
+          git diff --cached --quiet || git commit -m "Update PICOSO daily edition"
+          git push
