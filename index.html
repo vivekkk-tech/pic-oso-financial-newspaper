@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PICOSO — The Market, Decoded.</title>
+  <meta name="description" content="PICOSO is a fast, visual Indian financial newspaper focused on market impact, Paint, IT, startups, M&A and CFA concepts.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">P</div>
+    <div>
+      <div class="brand-name">PICOSO</div>
+      <div class="tagline">THE MARKET, DECODED.</div>
+    </div>
+  </div>
+  <div class="top-actions">
+    <span id="editionDate">Loading edition…</span>
+    <button id="themeBtn" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">ZERO-COST DAILY EDITION</span>
+      <h1>Know the news.<br><em>Know what changes.</em></h1>
+      <p>Only important stories. Under 30 seconds each. No hype. No buy/sell calls.</p>
+      <div class="hero-pills">
+        <span>📰 NEWS</span><span>→</span><span>📊 IMPACT</span><span>→</span><span>🧮 MODEL</span>
+      </div>
+    </div>
+    <div class="hero-art"><img src="assets/market.svg" alt="Original market illustration"></div>
+  </section>
+
+  <section class="section-head">
+    <div><span class="eyebrow">01 / THE BRIEF</span><h2>Today in 60 Seconds</h2></div>
+    <div class="muted">Freshest generated edition: <strong id="generatedAt">—</strong></div>
+  </section>
+  <section id="stories" class="story-grid"></section>
+
+  <section class="feature-grid">
+    <article class="feature paint">
+      <div class="feature-art"><img src="assets/paint.svg" alt="Original paint market illustration"></div>
+      <div class="feature-body">
+        <span class="eyebrow">02 / PAINT INTELLIGENCE</span>
+        <h2>News → Your Paint Model</h2>
+        <p>Not “good” or “bad”. Which assumption deserves another look?</p>
+        <div id="paintList"></div>
+      </div>
+    </article>
+    <article class="feature it">
+      <div class="feature-art"><img src="assets/it.svg" alt="Original IT market illustration"></div>
+      <div class="feature-body">
+        <span class="eyebrow">03 / IT INTELLIGENCE</span>
+        <h2>Demand. Margins. FX.</h2>
+        <p>Translate IT headlines into revenue and margin questions.</p>
+        <div id="itList"></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section-head">
+    <div><span class="eyebrow">04 / DEAL ROOM</span><h2>Startups + M&A</h2></div>
+  </section>
+  <section class="two-col">
+    <article class="panel">
+      <img src="assets/startup.svg" alt="Original startup illustration" class="panel-img">
+      <div class="panel-pad"><h3>🚀 Indian Startup Radar</h3><div id="startupList"></div></div>
+    </article>
+    <article class="panel">
+      <img src="assets/deal.svg" alt="Original M&A illustration" class="panel-img">
+      <div class="panel-pad"><h3>🤝 M&A Deal Room</h3><div id="dealList"></div></div>
+    </article>
+  </section>
+
+  <section class="cfa-section">
+    <div class="cfa-copy">
+      <span class="eyebrow">05 / CFA IN THE REAL WORLD</span>
+      <h2>One concept.<br>One real headline.</h2>
+      <div id="cfa"></div>
+    </div>
+    <img src="assets/cfa.svg" alt="Original CFA finance illustration">
+  </section>
+
+  <section class="tomorrow">
+    <span class="eyebrow">06 / DON'T PREDICT. PREPARE.</span>
+    <h2>Tomorrow's Question</h2>
+    <div id="tomorrow"></div>
+  </section>
+</main>
+
+<footer>
+  <strong>PICOSO</strong> · A personal finance-learning newspaper.
+  <span>Sources are linked. Headlines are summarized, not republished.</span>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

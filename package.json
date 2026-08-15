@@ -1,0 +1,10 @@
+{
+  "name": "pic-oso-zero-cost",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PICOSO zero-cost financial newspaper engine",
+  "type": "module",
+  "scripts": {
+    "generate": "node generate.mjs"
+  }
+}
